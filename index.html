@@ -4,29 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <!-- Header -->
     <div id="header">
+        <!-- LOGO ICON -->
         <div id="logo">
             <img src="./img/415791565_1101418471001982_6189920452808394444_n.png" alt="" class="logoimg">
         </div>
         <div id="nav">
             <ul class="subnav">
+                <!-- Button -->
                 <li><a href="#">
-                    <button class="btn"> Đăng nhập</button>
+                    <button class="btn bgrk#E2E2E2"> 
+                        <span>Đăng nhập</span>
+                    </button>
                 </a></li>
                 <li><a href="#">
-                    <button class="btn"> Bắt đầu học miễn phí</button>
+                    <button class="btn btn2 bgrk2"> 
+                        <span>Bắt đầu học miễn phí</span>
+                    </button>
                 </a></li>
             </ul>
         </div>
     </div>
-    
+    <!-- Slider -->
     <div id="slider">
+        <!-- Text - heading -->
+    <div class="text-heading">
+            <!-- <p class="text-discrip">
+                We have
+             <span class="counter-numbers">85000+</span> 
+                great job offers you deserve!
+            </p> -->
+            <h2 class="text-name">Học lập trình để</h2>
+            <!-- Side Scroll Text -->
+        <div class="items">
+            <h2 class="text-section">chinh phục<br>trái tim</h2>
+            <h2 class="text-section">vượt qua<br>đối thủ</h2>
+            <h2 class="text-section">gia tăng<br>điểm mạnh</h2>
+        </div>
+        </div>
+    </div>
     </div>
     
     <div id="content">
+        
     </div>
     
     <div id="footrer">
@@ -34,4 +58,37 @@
     
     
 </body>
+<script>
+    const slider = document.querySelector('text-heading');
+    let isDown = false;
+    let startX;
+    let scrollLeft = 0;
+
+    slider.addEventListener('mousdown', (e) => {
+        isDown = true;
+        slider.classList.add('active');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.classList.add('active');
+
+        
+    });
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.classList.add('active');
+      
+    });
+    slider.addEventListener('mousemove', (e) => {
+        if(!isDown) return ;
+       e.preventDefault();
+       const x = e.pageX - slider.offsetLeft;
+       const walk = (x - startX) * 2;
+       slider.scrollLeft = scrollLeft - walk;
+
+     
+    });
+</script>
 </html>
