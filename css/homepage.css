@@ -1,0 +1,293 @@
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+.p10
+{
+    padding:10px;
+}
+/* == HEADER ==  */
+#header{ 
+    display: flex;
+    position: fixed;
+    height: 96px;
+    background-color: #096B54;
+    justify-content: space-between;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 0px 32px;
+    align-items: center;
+    flex-shrink: 1;
+}
+/* Logo Icon */
+.logoImg{
+    width: 112px;
+    height: 56px;
+}
+/* Search Box */
+.search-box {
+    position: relative;
+    display: flex;
+    text-align: center;
+  }
+.searchTerm {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 440px;
+    height: 44px;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+    font-weight: 50;
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    color: #000;
+    outline: none;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+}
+.searchButton {
+    text-align: left;
+    position: absolute;
+    width: 40px;
+    height: 36px;
+    border: none;
+    outline: none!important;
+    background:transparent;
+    top: 1px;
+    padding: 10px;
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+  .wrap{
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+/* Right - infomation */
+.subnav
+{
+    margin-right: 5%;
+    display: flex;
+    flex-shrink: 1;
+    align-items: center;
+    flex-shrink: 1;
+    width: 211px;
+    gap: 10px;
+    justify-content: space-between;
+}
+/* myCourse Button */
+.btn
+{
+    display: inline-block;
+    border-radius: 12px; 
+    border: none;
+    color: #000;
+    text-align: center;
+    font-size: 17px;
+    padding: 16px;
+    width: 185px;
+    height: 50px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    background-color: #BBF9D4;
+}
+.btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s; 
+    text-align: center;
+    font-size: 17px;
+    font-weight: 10px;  
+}
+.btn span:after{
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+.btn:hover span {
+    padding-right: 15px;
+}
+.btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+/* Bell Icon */
+.bellImg{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+/* Avatar profile */
+.AvaImg{
+    width: 40px;
+    height: 40px;
+}
+
+/*  == CONTENT == */
+#content 
+{
+    display: flex;
+    position: relative;
+   padding:20px;
+    margin-top: 96px;
+    justify-content: space-between;
+    gap: 10px;
+}
+/* Sidebar_menu */
+.siderbar_menu
+{
+    display: inline-flex;
+    margin-top: 30px;
+    position: absolute;
+}
+.select_topic 
+{
+    list-style-type: none;
+}
+.select_topic li 
+{
+    padding: 12px 16px;
+    
+}
+.select_topic li a 
+{
+    text-decoration: none;
+    color:#000;
+}
+/* Button ===< SideBar_menu */
+button {
+    position: relative;
+    overflow: hidden;
+    padding:10 15px;
+    border-radius: 1.5rem;
+    font-weight: 100;
+    background-size: 400%;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+}
+.menu_btn span 
+{
+    padding:5px;
+    font-size: 15px;
+}
+.icon
+{
+    position: relative;
+    z-index: 1;
+    display:inline-flex;
+    align-items: center;
+}
+.icon1{
+    font-size: 15px;
+    padding:7px;
+}
+.menu_btn:hover::before {
+    transform: scaleX(1);
+  }
+  
+.button-content {
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+  
+.menu_btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      rgb(241, 238, 244) 10.8%,
+      rgb(242, 242, 245) 94.3%
+    );
+    transition: all 0.475s;
+}
+
+/* == FOOTERPAGE == */
+footer {
+    background-color: #151C1B;
+    margin-top: 30px;
+    margin-bottom: -23px;
+    overflow: hidden;
+}
+footer .footer-wrap {
+    padding: 25px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    color:#fff;
+}
+.special_name
+{
+    font-weight: 600;
+    font-size: 20px;
+    color: #BBD2C7;
+}
+/* Item 1 */
+footer .footer-wrap h6 {
+    padding: 20px 0px;
+    font-weight: 900;
+}
+.about p 
+{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+}
+/* Logo Icon */
+.imgIcon{
+    width: 112px;
+    height: 56px;
+    margin-bottom: 15px;
+}
+.Service p a , .Follow_us p a, .Contact p a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+}
+footer .footer-wrap .Service a:hover, footer .footer-wrap .Follow_us a:hover {
+    color: black;
+    font-weight: 600;    
+}
+  
+footer .footer-wrap .Service p, footer .footer-wrap .Follow_us p {
+    margin-bottom: 0.3em;
+    
+}
+  
+
+ 

@@ -7,6 +7,8 @@
 html
 {
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+
 }
 .bgrk#E2E2E2
 {
@@ -25,10 +27,15 @@ html
     padding: 0px 32px;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
+    flex-shrink: 1;
     justify-content: space-between;
     background: transparent;
-    z-index: 100;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
 }
 /* LOGO ICON */
 .logoimg{
@@ -40,6 +47,7 @@ html
     padding: 8px 12px;
     align-items: center;
     justify-content: space-between;
+
 }
 #nav li{
     list-style-type: none;
@@ -76,7 +84,7 @@ html
     right: -15px;
     transition: 0.5s;
 }
-.btn:hover span {
+.btn:hover  span {
     padding-right: 15px;
 }
 .btn:hover span:after {
@@ -86,6 +94,7 @@ html
 
 /* Slider */
 #slider{   
+    min-width: 100%;
     bottom:0;
     position: relative;
     overflow-y: hidden;
@@ -100,6 +109,7 @@ html
     margin-left: 40px;
     color: #fff;
     left: 150px;
+    
 }
 #slider .text-name{
     font-size: 70px;
@@ -119,8 +129,25 @@ html
     line-height: 1;
     color:#F256A1;
 }
-        /* === TEXT === */
+/* === TEXT === */
 .items{
+    display: flex;
+    overflow-x:hidden;
+    overflow-y: hidden;
+    transition: all 0.2s;
+    transform: scale(0.98);
+    position: relative;
+    white-space: nowrap;
+    user-select: none;  
+    width: 25%;
+}
+.items .item {
+    position: relative;
+    animation: animation 15s ease infinite;
+}
+.item{
+    min-width: calc(100% - .05rem);
+    aspect-ratio: 1 / 1;
     display: flex;
 }
 .items.active{
@@ -128,3 +155,27 @@ html
     cursor: -webkit-grabbing;
     transform: scale(1);
 }
+
+@keyframes animation {
+    0%,
+    100% {
+      left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -470px;
+    }
+    45% {
+        left: -470px;
+    }
+    50% {
+        left: -950px;
+    }
+    70% {
+        left: -950px;
+    }
+  
+ 
+  }

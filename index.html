@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+  
 </head>
 <body>
     <!-- Header -->
@@ -16,7 +17,7 @@
         <div id="nav">
             <ul class="subnav">
                 <!-- Button -->
-                <li><a href="#">
+                <li><a href="./HomePage.html">
                     <button class="btn bgrk#E2E2E2"> 
                         <span>Đăng nhập</span>
                     </button>
@@ -41,9 +42,16 @@
             <h2 class="text-name">Học lập trình để</h2>
             <!-- Side Scroll Text -->
         <div class="items">
-            <h2 class="text-section">chinh phục<br>trái tim</h2>
-            <h2 class="text-section">vượt qua<br>đối thủ</h2>
-            <h2 class="text-section">gia tăng<br>điểm mạnh</h2>
+            <div class="item item1">
+                 <h2 class="text-section">chinh phục<br>trái tim</h2>
+            </div>
+           <div class="item item2">
+                 <h2 class="text-section">vượt qua<br>đối thủ</h2>
+           </div> 
+            <div class="item item3">
+                <h2 class="text-section">gia tăng<br>điểm mạnh</h2>
+            </div>   
+    
         </div>
         </div>
     </div>
@@ -58,37 +66,5 @@
     
     
 </body>
-<script>
-    const slider = document.querySelector('text-heading');
-    let isDown = false;
-    let startX;
-    let scrollLeft = 0;
-
-    slider.addEventListener('mousdown', (e) => {
-        isDown = true;
-        slider.classList.add('active');
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-    });
-    slider.addEventListener('mouseleave', () => {
-        isDown = false;
-        slider.classList.add('active');
-
-        
-    });
-    slider.addEventListener('mouseup', () => {
-        isDown = false;
-        slider.classList.add('active');
-      
-    });
-    slider.addEventListener('mousemove', (e) => {
-        if(!isDown) return ;
-       e.preventDefault();
-       const x = e.pageX - slider.offsetLeft;
-       const walk = (x - startX) * 2;
-       slider.scrollLeft = scrollLeft - walk;
-
-     
-    });
-</script>
+<script src = "./script/java.js"></script>
 </html>
