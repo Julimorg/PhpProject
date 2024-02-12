@@ -179,3 +179,60 @@ html
   
  
   }
+
+
+
+  
+/* == FOOTERPAGE == */
+footer {
+    background-color: #151C1B;
+    margin-top: 30px;
+    margin-bottom: -23px;
+    overflow: hidden;
+}
+footer .footer-wrap {
+    padding: 25px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    color:#fff;
+}
+.special_name
+{
+    font-weight: 600;
+    font-size: 20px;
+    color: #BBD2C7;
+}
+/* Item 1 */
+footer .footer-wrap h6 {
+    padding: 20px 0px;
+    font-weight: 900;
+}
+.about p 
+{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+}
+/* Logo Icon */
+.imgIcon{
+    width: 112px;
+    height: 56px;
+    margin-bottom: 15px;
+}
+.Service p a , .Follow_us p a, .Contact p a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+}
+footer .footer-wrap .Service a:hover, footer .footer-wrap .Follow_us a:hover {
+    color: black;
+    font-weight: 600;    
+}
+  
+footer .footer-wrap .Service p, footer .footer-wrap .Follow_us p {
+    margin-bottom: 0.3em;
+    
+}
+  
