@@ -4,11 +4,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 html
 {
     font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
+}
+body
+{
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+    padding:0;
+    align-items: center;
 }
 .p10
 {
@@ -150,28 +157,41 @@ html
 /*  == CONTENT == */
 #content 
 {
+    margin-left: 1px;
     display: flex;
     position: relative;
-   padding:20px;
+    padding: 20px;
     margin-top: 96px;
+    margin-bottom: -29px;
     justify-content: space-between;
 }
 
 /* Sidebar_menu */
-.siderbar_menu
+#siderbar_menu
 {
     display: inline-flex;
     margin-top: 30px;
     position: absolute;
+    background: transparent;
+}
+.sub_sidebar
+{
+    display: flex;
+    gap: 60px;
+    
 }
 .select_topic 
 {
     list-style-type: none;
+    width: 114px;
+    border-right: 1px solid #d1d7dc;
+
 }
 .select_topic li 
 {
+    margin-left: -24px;
     padding: 12px 16px;
-    
+    width: 80px;
 }
 .select_topic li a 
 {
@@ -183,7 +203,7 @@ button {
     position: relative;
     overflow: hidden;
     padding:10 15px;
-    border-radius: 1.5rem;
+    border-radius: 10px;
     font-weight: 100;
     background-size: 400%;
     color: #000;
@@ -239,18 +259,28 @@ button {
 /* Content Page */
 #main_content
 {
+    margin-top: -3px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+   
     padding: 20px;
+    right: auto;
 }
 /* Scroller item */
+.slider
+{
+    width: 1224px;
+    height: 500px;
+    border-radius:10px ;
+    overflow: hidden;
+}
 .slider_item
 {
     margin-left: 50px;
-    max-width: 100rem;
+    width: 500%;
+    height: 500px;
     overflow: hidden;
     white-space: nowrap;
     display: flex;
@@ -266,12 +296,37 @@ button {
 }
 .course_item
 {
-    display: flex;
-    flex-wrap: wrap;
+    width: 20%;
+    transition: 2s;
     gap:1rem;
     padding-block:1rem ;
 }
-.slider_item[data-animated="true"]
+.course_item a img
+{
+    width: 800px;
+    height: 460px;
+}
+.slider input
+{
+    display: none;
+}
+.navigation-manual
+{
+    position: absolute ;
+    width: 800px;
+    margin-top: -40px;
+    display: flex ;
+    justify-content: center;
+}
+.manual-btn
+{
+    border: 2px solid #000;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+/* .slider_item[data-animated="true"]
 {
     overflow: hidden;
     -webkit-mask:
@@ -300,11 +355,13 @@ button {
 .slider_item:hover .course_item
 {
     animation-play-state: paused;
-}
+} */
 /* Slide img item */
 .itemImg
 {
+    height: 320px;
     border-radius: 20px;
+    width: 1224px;
 }
 .itemImg:hover 
 {

@@ -31,21 +31,21 @@ slider.addEventListener('mousemove', (e) => {
    slider.scrollLeft = scrollLeft - walk;
 });
 // Scroller 
-const scrollers = document.querySelectorAll(".slider_item");   
-if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches)
-{
-    addAnimation();
-}
-function addAnimation() 
-{
-   scrollers.forEach((scroller)=>{
-    scroller.setAttribute("data-animated",true);
-    const courseItem = scroller.querySelector('.course_item');
-    const scrollerContent = Array.from(courseItem.children);
-    scrollerContent.forEach(item =>{
-        const duplicatedItem  = item.cloneNode(true);
-        duplicatedItem.setAttribute("aria-hidden",true);
-        courseItem.appendChild(duplicatedItem);
-    })
-   })
-}
+// const scrollers = document.querySelectorAll(".slider_item");   
+// if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+// {
+//     addAnimation();
+// }
+// function addAnimation() 
+// {
+//    scrollers.forEach((scroller)=>{
+//     scroller.setAttribute("data-animated",true);
+//     const courseItem = scroller.querySelector('.course_item');
+//     const scrollerContent = Array.from(courseItem.children);
+//     scrollerContent.forEach(item =>{
+//         const duplicatedItem  = item.cloneNode(true);
+//         duplicatedItem.setAttribute("aria-hidden",true);
+//         courseItem.appendChild(duplicatedItem);
+//     })
+//    })
+// }
