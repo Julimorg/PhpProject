@@ -184,7 +184,6 @@ body
 {
     list-style-type: none;
     width: 114px;
-    border-right: 1px solid #d1d7dc;
 
 }
 .select_topic li 
@@ -270,8 +269,7 @@ button {
 }
 /* Slider swiper item*/
 .slider{
-    width: 1412px;
-    width: 1412px;
+   width: 1082px;
     height: 320px;
     margin: auto;
     position: relative;
@@ -288,7 +286,7 @@ button {
 }
 .slider .list img{
     border-radius: 20px;
-    width: 1412px;
+    width: 1082px;
     max-width: 100vw;
     height: 320px;
     object-fit: cover;
